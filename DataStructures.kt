@@ -40,8 +40,6 @@ fun countOccurrences(input:String):Map<Char,Int>{
 /*
 Find the most recurring char in the input string.
 */
-
-
 fun findRecurring(input:String): Char {
     var count =mutableMapOf<Char, Int>()
     var mostRecurringCount =0
@@ -138,8 +136,6 @@ fun checkRotations(input1:String, input2:String): Boolean {
 /*
 Check whether two strings are anagram of each other.
 */
-
-
 fun checkAnagram(input1: String,input2: String): Boolean {
    if (input2.length!=input1.length)   return false
    var count1 = mutableMapOf<Char, Int>()
@@ -154,8 +150,13 @@ fun checkAnagram(input1: String,input2: String): Boolean {
 }
 
 
-
-Find the length of the longest common prefix (LeetCode). You are given two arrays with positive integers arr1 and arr2. A prefix of a positive integer is an integer formed by one or more of its digits, starting from its leftmost digit. For example, 123 is a prefix of the integer 12345, while 234 is not. A common prefix of two integers a and b is an integer c, such that c is a prefix of both a and b. For example, 5655359 and 56554 have common prefixes 565 and 5655 while 1223 and 43456 do not have a common prefix. You need to find the length of the longest common prefix between all pairs of integers (x, y) such that x belongs to arr1 and y belongs to arr2. Return the length of the longest common prefix among all pairs. If no common prefix exists among them, return 0. 
+/* DOUBT
+Find the length of the longest common prefix (LeetCode). You are given two arrays with positive integers arr1 and arr2.
+A prefix of a positive integer is an integer formed by one or more of its digits, starting from its leftmost digit. 
+For example, 123 is a prefix of the integer 12345, while 234 is not. A common prefix of two integers a and b is an integer c,
+such that c is a prefix of both a and b. For example, 5655359 and 56554 have common prefixes 565 and 5655 while 1223 and 43456 do not have a common prefix. 
+You need to find the length of the longest common prefix between all pairs of integers (x, y) such that x belongs to arr1 and y belongs to arr2. 
+Return the length of the longest common prefix among all pairs. If no common prefix exists among them, return 0. 
 */
 fun longestCommonPrefix(arr1: IntArray, arr2: IntArray): Int {
    var count = HashSet<String>()
@@ -203,7 +204,6 @@ class Solution {
 /**
 Move all zeros to the end of an array while maintaining the order of non-zero elements.
  **/
-
  if (nums.size<2) return
         // len > 2
         var first = 0
@@ -230,8 +230,6 @@ Move all zeros to the end of an array while maintaining the order of non-zero el
 
 /*
     Given an array nums of size n, return the majority element.
-
-
     The majority element is the element that appears more than
     ⌊n / 2⌋ times. You may assume that the majority element always  
     exists in the array.
