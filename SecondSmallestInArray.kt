@@ -3,7 +3,7 @@
         var firstSmallest = Integer.MAX_VALUE
         var secondSmallest = Integer.MAX_VALUE
 
-        for (i in 0..array.size) {
+        for (i in 0..array.size-1) {
             if (array[i] < firstSmallest) {
                 secondSmallest = firstSmallest
                 firstSmallest = array[i]
