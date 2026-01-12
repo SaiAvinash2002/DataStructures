@@ -1,0 +1,32 @@
+// Program to find x raise to y but with time complexity O ( log n)
+fun xToThePowerY(x: Int, y: Int): Int {
+        if (y == 0) return 1
+
+        val half = xToThePowerY(x, y / 2)
+        return if (y % 2 == 0) {
+            half * half
+        } else {
+            x * half * half
+        }
+    }
+// Time Complexity: O(logn)
+// Space: O(1)
+
+
+
+Program to find x raise to y but with time complexity O ( log n base 3)
+Modified Question:
+ fun xToThePowerY(x: Int, y: Int): Int {
+        if (y == 0) return 1
+
+        val thrid = xToThePowerY(x, y / 3)
+        return if (y % 3 == 0) {
+            thrid * thrid * thrid
+        } else if (y % 3 == 1) {
+            x * thrid * thrid * thrid
+        } else {
+            x * x * thrid * thrid * thrid
+        }
+    }
+// Time Complexity: O(logn to the base 3)
+// Space: O(1)
