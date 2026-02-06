@@ -1,0 +1,15 @@
+fun removeDuplicatesFromSortedList(list:List<Int>){
+    val elements = HashSet<Int>()
+    
+    print("Duplicate Elements are: ")
+        for(i in list){
+        if(elements.contains(i)){
+            print("$i ")
+        }else{
+            elements.add(i)
+        }
+    }
+    println()
+    println("List without duplicates: "+elements.joinToString(" "))
+    
+}
