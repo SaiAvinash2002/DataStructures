@@ -1,0 +1,23 @@
+    fun DutchNationalFlag(nums: IntArray): Unit {
+        
+        var low = 0
+        var high = nums.size -1
+        var mid = 0
+
+        while(mid<=high){
+            if(nums[mid]==0){
+                nums[mid] = nums[low]
+                nums[low]=0
+                low++
+                mid++
+            }
+            else if(nums[mid]==2){
+                nums[mid] = nums[high]
+                nums[high]=2
+                high--
+            }
+            else if(nums[mid]==1){
+                mid++
+            }
+        }
+    }
